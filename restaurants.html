@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R&W - Restaurants</title>
+    <!-- Google Fonts for 'Inter' and 'Dancing Script' -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Your compiled custom CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <!-- Navbar Component (re-used from home.html) -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-rw">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="home.html">
+                <span class="text-script">R&W</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="restaurants.html">Restaurants</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">Profile</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-signin" href="signin.html">Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-5">
+        <section class="py-5">
+            <div class="container">
+                <h2 class="section-title">Restaurants</h2>
+                <p class="text-center text-muted mb-4">Find the perfect spot for your next meal or share your experience!</p>
+
+                <!-- Search and Filter Bar -->
+                <div class="row mb-5 justify-content-center">
+                    <div class="col-md-8 col-lg-6">
+                        <div class="input-group mb-3">
+                            <input type="text" class="rw-form-control" placeholder="Search restaurants..." aria-label="Search restaurants">
+                            <button class="btn rw-btn-primary" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
+                        </div>
+                        <div class="d-flex justify-content-center flex-wrap gap-2">
+                            <button class="btn btn-sm rw-btn-secondary">All</button>
+                            <button class="btn btn-sm rw-btn-secondary">African</button>
+                            <button class="btn btn-sm rw-btn-secondary">Asian</button>
+                            <button class="btn btn-sm rw-btn-secondary">European</button>
+                            <button class="btn btn-sm rw-btn-secondary">Fast Food</button>
+                            <button class="btn btn-sm rw-btn-secondary">Cafes</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurants Grid -->
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <!-- Restaurant Card 1 (Example - duplicate and change content for more) -->
+                    <div class="col">
+                        <div class="restaurant-card">
+                            <img src="assets/img/restaurant-placeholder.jpg" class="card-img-top" alt="Pili Pili Restaurant">
+                            <div class="card-body">
+                                <h5 class="restaurant-name">Pili Pili</h5>
+                                <p class="restaurant-location"><i class="fas fa-map-marker-alt me-1"></i> Kigali, 5.2km away</p>
+                                <div class="star-rating mb-2">
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="far fa-star star"></i>
+                                </div>
+                                <p class="restaurant-description">A vibrant spot known for its lively atmosphere and diverse menu, offering a mix of local and international dishes.</p>
+                                <a href="#" class="btn btn-sm rw-btn-secondary">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Restaurant Card 2 -->
+                    <div class="col">
+                        <div class="restaurant-card">
+                            <img src="https://placehold.co/600x400/F7D060/FFFFFF?text=La+Prezea" class="card-img-top" alt="La Prezea Restaurant">
+                            <div class="card-body">
+                                <h5 class="restaurant-name">La Prezea</h5>
+                                <p class="restaurant-location"><i class="fas fa-map-marker-alt me-1"></i> Kigali, 3.8km away</p>
+                                <div class="star-rating mb-2">
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                </div>
+                                <p class="restaurant-description">An elegant dining experience with a focus on fine Italian cuisine and a sophisticated ambiance.</p>
+                                <a href="#" class="btn btn-sm rw-btn-secondary">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Restaurant Card 3 -->
+                    <div class="col">
+                        <div class="restaurant-card">
+                            <img src="https://placehold.co/600x400/6B7280/FFFFFF?text=Kigali+Lounge" class="card-img-top" alt="Kigali Lounge Restaurant">
+                            <div class="card-body">
+                                <h5 class="restaurant-name">Kigali Lounge</h5>
+                                <p class="restaurant-location"><i class="fas fa-map-marker-alt me-1"></i> Kigali, 7.1km away</p>
+                                <div class="star-rating mb-2">
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="far fa-star star"></i>
+                                    <i class="far fa-star star"></i>
+                                </div>
+                                <p class="restaurant-description">Relaxed atmosphere with great views, perfect for casual meetups and enjoying local brews.</p>
+                                <a href="#" class="btn btn-sm rw-btn-secondary">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more restaurant cards as needed -->
+                     <div class="col">
+                        <div class="restaurant-card">
+                            <img src="https://placehold.co/600x400/F7D060/FFFFFF?text=KFC" class="card-img-top" alt="KFC Restaurant">
+                            <div class="card-body">
+                                <h5 class="restaurant-name">KFC</h5>
+                                <p class="restaurant-location"><i class="fas fa-map-marker-alt me-1"></i> Kigali, 2.5km away</p>
+                                <div class="star-rating mb-2">
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="far fa-star star"></i>
+                                </div>
+                                <p class="restaurant-description">World-renowned fast-food chain specializing in fried chicken. Quick service and consistent taste.</p>
+                                <a href="#" class="btn btn-sm rw-btn-secondary">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="restaurant-card">
+                            <img src="https://placehold.co/600x400/6B7280/FFFFFF?text=Marriott+Hotel" class="card-img-top" alt="Marriott Hotel Restaurant">
+                            <div class="card-body">
+                                <h5 class="restaurant-name">Marriott Hotel</h5>
+                                <p class="restaurant-location"><i class="fas fa-map-marker-alt me-1"></i> Kigali, 1.0km away</p>
+                                <div class="star-rating mb-2">
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                </div>
+                                <p class="restaurant-description">Offers a variety of dining options from casual to fine dining, with excellent service and a luxurious setting.</p>
+                                <a href="#" class="btn btn-sm rw-btn-secondary">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="restaurant-card">
+                            <img src="https://placehold.co/600x400/F7D060/FFFFFF?text=Chez+L'Etoile" class="card-img-top" alt="Chez L'Etoile Restaurant">
+                            <div class="card-body">
+                                <h5 class="restaurant-name">Chez L'Etoile</h5>
+                                <p class="restaurant-location"><i class="fas fa-map-marker-alt me-1"></i> Kigali, 4.0km away</p>
+                                <div class="star-rating mb-2">
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="fas fa-star star"></i>
+                                    <i class="far fa-star star"></i>
+                                </div>
+                                <p class="restaurant-description">A charming French bistro known for its authentic dishes and cozy atmosphere, perfect for a romantic dinner.</p>
+                                <a href="#" class="btn btn-sm rw-btn-secondary">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component (re-used from home.html) -->
+    <footer class="rw-footer py-4 mt-5">
+        <div class="container text-center">
+            <div class="footer-logo mb-3">
+                <span class="text-script">R&W</span>
+            </div>
+            <p class="mb-0">&copy; 2023 R&W. All rights reserved.</p>
+            <div class="social-icons mt-3">
+                <a href="#" class="text-white mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS CDN (Bundle includes Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Your custom JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

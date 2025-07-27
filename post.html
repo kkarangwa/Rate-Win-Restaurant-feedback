@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R&W - Post Feedback</title>
+    <!-- Google Fonts for 'Inter' and 'Dancing Script' -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Your compiled custom CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <!-- Navbar Component (re-used from home.html) -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-rw">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="home.html">
+                <span class="text-script">R&W</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="restaurants.html">Restaurants</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">Profile</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-signin" href="signin.html">Sign Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-5">
+        <section class="py-5">
+            <div class="container">
+                <h2 class="section-title">Post your feedback</h2>
+
+                <div class="post-page-form">
+                    <form id="feedbackForm">
+                        <div class="mb-4">
+                            <label for="restaurantSelect" class="form-label fw-bold">Choose Restaurant</label>
+                            <select class="rw-form-control" id="restaurantSelect" required>
+                                <option value="">Select a restaurant...</option>
+                                <option value="pili-pili">Pili Pili</option>
+                                <option value="la-prezea">La Prezea</option>
+                                <option value="kigali-lounge">Kigali Lounge</option>
+                                <option value="kfc">KFC</option>
+                                <option value="marriott-hotel">Marriott Hotel</option>
+                                <option value="chez-letoile">Chez L'Etoile</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="commentTextarea" class="form-label fw-bold">Comment Your Feedback</label>
+                            <textarea class="rw-form-control" id="commentTextarea" rows="5" placeholder="Share your experience here..." required></textarea>
+                        </div>
+
+                        <div class="mb-4">
+                            <label class="form-label fw-bold d-block">Submit a rating</label>
+                            <div class="star-rating-input" data-rating="0">
+                                <i class="far fa-star star-icon" data-value="1"></i>
+                                <i class="far fa-star star-icon" data-value="2"></i>
+                                <i class="far fa-star star-icon" data-value="3"></i>
+                                <i class="far fa-star star-icon" data-value="4"></i>
+                                <i class="far fa-star star-icon" data-value="5"></i>
+                            </div>
+                            <input type="hidden" id="ratingInput" name="rating" value="0">
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <button type="submit" class="rw-btn-primary">Submit Feedback</button>
+                            <span class="points-display" id="pointsAwarded">+0 points</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component (re-used from home.html) -->
+    <footer class="rw-footer py-4 mt-5">
+        <div class="container text-center">
+            <div class="footer-logo mb-3">
+                <span class="text-script">R&W</span>
+            </div>
+            <p class="mb-0">&copy; 2023 R&W. All rights reserved.</p>
+            <div class="social-icons mt-3">
+                <a href="#" class="text-white mx-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS CDN (Bundle includes Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Your custom JavaScript for feedback form -->
+    <script src="assets/js/feedback.js"></script>
+    <!-- General JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
