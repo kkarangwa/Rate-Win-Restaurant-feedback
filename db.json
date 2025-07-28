@@ -1,10 +1,75 @@
 {
-  "feedback": [
+  "users": [
     {
       "id": 1,
-      "user": "Agnes",
+      "name": "Irielle Irakoze",
+      "email": "irielle@example.com",
+      "password": "password123",
+      "avatar": "pics/2.jpg"
+    },
+    {
+      "id": 2,
+      "name": "John Smith",
+      "email": "john@example.com",
+      "password": "testpass",
+      "avatar": "pics/3.jpg"
+    }
+  ],
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "Spicy Bites",
+      "location": "Kigali, Rwanda",
+      "category": "African",
+      "rating": 4.2,
+      "image": "pic/4.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Sushi World",
+      "location": "Remera, Kigali",
+      "category": "Japanese",
+      "rating": 4.8,
+      "image": "pic/5.jpg"
+    }
+  ],
+  "feedbacks": [
+    {
+      "id": 1,
+      "restaurantId": 1,
+      "userId": 1,
       "rating": 5,
-      "comment": "Amazing experience!"
+      "comment": "Amazing food and very clean space!",
+      "date": "2025-07-25"
+    },
+    {
+      "id": 2,
+      "restaurantId": 2,
+      "userId": 2,
+      "rating": 4,
+      "comment": "Loved the sushi, a bit expensive though.",
+      "date": "2025-07-26"
+    }
+  ],
+  "rewards": [
+    {
+      "id": 1,
+      "userId": 1,
+      "points": 150,
+      "redeemed": false
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "points": 50,
+      "redeemed": true
+    }
+  ],
+  "admins": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin123"
     }
   ]
 }
