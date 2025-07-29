@@ -1,0 +1,10 @@
+{
+  "feedback": [
+    {
+      "id": 1,
+      "user": "Agnes",
+      "rating": 5,
+      "comment": "Amazing experience!"
+    }
+  ]
+}
